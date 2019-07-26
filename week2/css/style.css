@@ -1,0 +1,115 @@
+* {
+	box-sizing: border-box;
+}
+
+body, html {
+	min-height: 100vh;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: url('../img/freecell_bg.png');
+	background-color: #f6da96;
+	background-size: cover;
+	background-repeat: no-repeat
+}
+
+#burger{
+	position: fixed;
+	width: 80px;
+	height: 80px;
+	left: 55px;
+	bottom: 36px;
+	background: url('../img/icon_logo.png');
+}
+
+#menu {
+	position: fixed;
+	bottom: 40px;
+	right: 50px;
+}
+
+.menu-button {
+	width: 90px;
+	height: 90px;
+	margin-top: 30px;
+	background: #fafad7;
+	border-radius: 50%;
+	text-align: center;
+	padding-top: 15px;
+}
+
+.card {
+	width: 6vw;
+	height: 7.8vw;
+	border-radius: 1vw;
+	background: rgba(250, 250, 250, 0.5);
+	border: 5px solid #ffbc00;
+	margin: 0.75vw;
+	display: inline-block;
+}
+
+.top {
+	position: relative;
+	height: 12vw;
+	font-size: 2.5vw;
+	padding-top: 2.5vw;
+	font-weight: 800;
+}
+
+.time {
+	text-align: center;
+
+}
+
+.topLeft {
+	position: absolute;
+	top: 2vw;
+	left: 10vw;
+}
+
+.topRight {
+	position: absolute;
+	top: 2vw;
+	right: 10vw;
+}
+
+.topRight .card {
+	border: 0;
+	background-size: cover;
+}
+
+.topRight .card:nth-child(1) { background-image: url('../card/card_54.png'); }
+.topRight .card:nth-child(2) { background-image: url('../card/card_55.png'); }
+.topRight .card:nth-child(3) { background-image: url('../card/card_56.png'); }
+.topRight .card:nth-child(4) { background-image: url('../card/card_57.png'); }
+
+.cardDeck {
+	display: inline-block;
+	width: 8vw;
+	margin: 0.5vw;
+	position: relative;
+	vertical-align: top;
+}
+
+.cardDeck:nth-child(2) {
+	margin-left: 13vw;
+}
+
+.cardDeck .card {
+	position: absolute;
+	background: #fff;
+	left: 0;
+	#background: url('../card/card_36.png');
+	background-size: cover;
+	border: 0;
+}
+
+.cardDeck .card:nth-child(1) { top: 0; }
+.cardDeck .card:nth-child(2) { top: 2vw; }
+.cardDeck .card:nth-child(3) { top: 4vw; }
+.cardDeck .card:nth-child(4) { top: 6vw; }
+.cardDeck .card:nth-child(5) { top: 8vw; }
+.cardDeck .card:nth-child(6) { top: 10vw; }
+.cardDeck .card:nth-child(7) { top: 12vw; }

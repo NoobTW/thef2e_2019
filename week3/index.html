@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
+	<link rel="stylesheet" href="css/style.css" />
+	<title>MP3 Player</title>
+</head>
+<body>
+	<section id="folders">
+		<header>
+			<h2>清單</h2>
+			<div class="menu">
+				<span>加入</span>
+				<span>編輯</span>
+			</div>
+		</header>
+		<ul>
+			<li>
+				<div class="icon"><i class="far fa-folder-open"></i></div>
+				<div class="name">My favorite</div>
+			</li>
+			<li>
+				<div class="icon"><i class="far fa-folder"></i></div>
+				<div class="name">預設播放清單</div>
+			</li>
+		</ul>
+	</section><section id="songs">
+		<header>
+			<h2>歌曲列表</h2>
+			<div class="menu">
+				<span>加入</span>
+				<span>編輯</span>
+			</div>
+			<table>
+				<thead>
+					<tr>
+						<th>歌曲</th>
+						<th>演出者</th>
+						<th>長度</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>
+							<div class="album"><img src="https://fakeimg.pl/100x100"></div>
+							<div class="name">Lorem</div>
+						</td>
+						<td>Noob</td>
+						<td>6:34</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="album"><img src="https://fakeimg.pl/100x100"></div>
+							<div class="name">Lorem</div>
+						</td>
+						<td>Noob</td>
+						<td>6:34</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="album"><img src="https://fakeimg.pl/100x100"></div>
+							<div class="name">Lorem</div>
+						</td>
+						<td>Noob</td>
+						<td>6:34</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="album"><img src="https://i.kfs.io/album/global/40867320,1v1/fit/500x500.jpg"></div>
+							<div class="name">Lorem</div>
+						</td>
+						<td>Noob</td>
+						<td>6:34</td>
+					</tr>
+				</tbody>
+			</table>
+		</header>
+	</section><section id="player">
+		<div class="bg"></div>
+		<header>
+			<div class="left">顯示歌曲</div>
+			<div class="right">顯示歌詞</div>
+		</header>
+		<div id="album" class="img">
+			<img src="https://i.kfs.io/album/global/40867320,1v1/fit/500x500.jpg" alt="">
+		</div>
+		<div class="progress"></div>
+		<div id="song">Lorem - Lorem Ipsum</div>
+		<div class="controllers">
+			<div class="controller"><i class="fas fa-backward"></i></div>
+			<div class="controller"><i class="fas fa-play"></i></div>
+			<div class="controller"><i class="fas fa-forward"></i></div>
+		</div>
+	</section>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="js/all.js"></script>
+</body>
+</html>

@@ -9,6 +9,8 @@ html, body {
 
 body {
 	font-family: "Noto Sans TC", sans-serif;
+	white-space: nowrap;
+	overflow-x: hidden;
 }
 
 img {
@@ -26,7 +28,7 @@ section {
 }
 
 section#folders {
-	width: 20vw;
+	width: 19vw;
 }
 
 section#songs {
@@ -139,11 +141,35 @@ section#player header .right {
 }
 
 #album {
-	margin: 15px;
+	margin: 15px auto;
+	padding: 0 15px;
 }
 
 #album img {
 	width: 100%;
+}
+
+#progress {
+	margin: 15px auto;
+	width: calc(100% - 30px);
+	display: block;
+}
+
+.progress {
+	position: relative;
+	color: #fff;
+}
+
+.progress .left {
+	text-align: left;
+	display: inline-block;
+	margin-left: 15px;
+}
+
+.progress .right {
+	position: absolute;
+	bottom: 0;
+	right: 15px;
 }
 
 #song {

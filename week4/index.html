@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Payment</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="progress">
+                <div class="progress-bar progress-first progress-right">
+                    <i class="fas fa-check"></i>
+                </div>
+                Cart
+            </div>
+            <div class="progress">
+                <div class="progress-bar progress-both">
+                    <i class="fas fa-check"></i>
+                </div>
+                Delivery
+            </div>
+            <div class="progress">
+                <div class="progress-bar progress-left">
+                    <i class="fas fa-credit-card"></i>
+                </div>
+                Payment
+            </div>
+            <div class="progress">
+                <div class="progress-bar progress-last">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                Confirmation
+            </div>
+        </header>
+        <div class="methods">
+            <div class="method active">
+                <div class="method-icon">
+                    <i class="far fa-credit-card"></i>
+                </div>
+                <div class="method-name">Credit Card</div>
+            </div>
+            <div class="method">
+                <div class="method-icon">
+                    <i class="fas fa-laptop"></i>
+                </div>
+                <div class="method-name">ATM</div>
+            </div>
+            <div class="method">
+                <div class="method-icon">
+                    <i class="fas fa-globe"></i>
+                </div>
+                <div class="method-name">WebATM</div>
+            </div>
+            <div class="method">
+                <div class="method-icon">
+                    <i class="fab fa-paypal"></i>
+                </div>
+                <div class="method-name">PayPal</div>
+            </div>
+        </div>
+        <div class="form">
+            <div class="left">
+                <div class="input">
+                    <div class="label">Cardholder Name</div>
+                    <input type="text">
+                </div>
+                <div class="left">
+                    <div class="input">
+                        <div class="label">End Date</div>
+                        <input class="short" type="text"><input class="short" type="text">
+                    </div>
+                </div>
+                <div class="left">
+                    <div class="input">
+                        <div class="label">CVV</div>
+                        <input class="short" type="text">
+                    </div>
+                </div>
+            </div>
+            <div class="left">
+                <div class="input m0">
+                    <div class="label">Card Number</div>
+                    <input class="short" type="text">─<input class="short" type="text">─
+                    <input class="short" type="text">─<input class="short" type="text">
+                </div>
+                <div class="input">
+                    <div class="label">Payer Email Address</div>
+                    <input type="email">
+                </div>
+            </div>
+            <div>
+                <input type="checkbox"> Please confirm the order and payment information again.
+            </div>
+        </div>
+        
+        <div class="button" id="prev">← Back</div>
+        <div class="button" id="next">Next Step →</div>
+    </div>
+</body>
+</html>

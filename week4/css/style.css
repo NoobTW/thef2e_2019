@@ -1,0 +1,192 @@
+:root {
+    --color-disabled: #D9D7D7;
+    --color-progress-none: #E6EAF4;
+    --color-progress-full: #6481C1;
+    --color-method-active: #413F3F;
+    --color-button-active: #6481C1;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.wrapper {
+    max-width: 1600px;
+    margin: 50px auto 0;
+}
+
+.progress {
+    display: inline-block;
+    width: 20vw;
+    text-align: center;
+    font-size: 22px;
+}
+
+.progress-bar {
+    border-radius: 50%;
+    background: var(--color-progress-none);
+    color: var(--color-progress-full);
+    width: 82px;
+    height: 82px;
+    margin: 0 auto 20px;
+    line-height: 82px;
+    text-align: center;
+    font-size: 36px;
+    position: relative;
+}
+
+.progress-both, .progress-left, .progress-right {
+    background: var(--color-progress-full);
+    color: #fff;
+}
+
+.progress-bar::before {
+    content: "";
+    position: absolute;
+    width: 200px;
+    height: 24px;
+    left: -198px;
+    top: 32px;
+    z-index: -1;
+    background: var(--color-progress-none);
+}
+
+.progress-bar::after {
+    content: "";
+    position: absolute;
+    width: 200px;
+    height: 24px;
+    left: 2px;
+    top: 32px;
+    z-index: -1;
+    background: var(--color-progress-none);
+}
+
+.progress-left::before{
+    background: var(--color-progress-full);
+}
+
+.progress-both::before{
+    background: var(--color-progress-full);
+}
+
+.progress-both::after{
+    background: var(--color-progress-full);
+}
+
+.progress-right::after{
+    background: var(--color-progress-full);
+}
+
+.progress-first::before{
+    width: 0;
+    height: 0;
+}
+
+.progress-last::after{
+    width: 0;
+    height: 0;
+}
+
+.methods {
+    text-align: center;
+}
+
+.method {
+    display: inline-block;
+    margin: 40px 80px;
+}
+
+.method-icon {
+    position: relative;
+    border: 1px solid var(--color-disabled);
+    border-radius: 50%;
+    width: 128px;
+    height: 128px;
+    text-align: center;
+    line-height: 128px;
+    font-size: 48px;
+    color: var(--color-disabled);
+    margin-bottom: 30px;
+}
+
+.method-name {
+    color: var(--color-disabled);
+    text-align: center;
+}
+
+.method.active .method-icon, .method.active .method-name {
+    color: var(--color-method-active);
+    border-color: var(--color-method-active);
+}
+
+.method.active .method-icon {
+    box-shadow: 3px 3px 8px 2px #aaa;
+}
+
+.method-icon:hover, .method-name:hover {
+    color: var(--color-method-active);
+    border-color: var(--color-method-active);
+    transition: .1s all linear;
+}
+
+.method.active .method-icon::after{
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 55px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 10px 0 10px;
+    border-color: var(--color-method-active) transparent transparent transparent;
+}
+
+.left {
+    display: inline-block;
+    width: 48%;
+}
+
+.input {
+    margin-bottom: 40px;
+}
+
+.input .label {
+    color: #707070;
+    margin-bottom: 6px;
+}
+
+.input input {
+    background: #EFEFEF;
+    border-radius: 25px;
+    outline: 0;
+    border: 0;
+    margin-right: 10px;
+    font-size: 16px;
+    padding: 10px;
+}
+
+.m0 input {
+    margin-right: 0;
+}
+
+.input .short {
+    width: 20%;
+}
+
+.button {
+    display: inline-block;
+    width: 243px;
+    height: 64px;
+    border-radius: 40px;
+    margin-top: 40px;
+    line-height: 58px;
+    text-align: center;
+    border: 5px solid var(--color-button-active);
+}
+
+.button#next {
+    float: right;
+    background: var(--color-button-active);
+    color: #fff;
+}

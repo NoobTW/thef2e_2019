@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import moment from 'moment';
+import { createBrowserHistory } from 'history';
 import { Offline, Online } from 'react-detect-offline';
 import './App.css';
 
@@ -12,9 +13,21 @@ const options = {
   }
 };
 
+let history;
+let unlisten;
+
 function App() {
   const [rooms, setRooms] = useState([]);
   const [currentView, setCurrentView] = useState(null);
+
+  history = createBrowserHistory();
+
+  unlisten = history.listen((location, action) => {
+    if (action === 'POP') {
+      setCurrentView(null);
+    }
+  });
+
   useEffect(() => {
     (async () => {
       const { data } = await axios.get('https://challenge.thef2e.com/api/thef2e2019/stage6/rooms', options);
@@ -22,6 +35,8 @@ function App() {
         setRooms(data.items);
       }
     })();
+
+    return () => { unlisten(); };
   }, []);
 
   const [cName, setCName] = useState('');
@@ -32,6 +47,7 @@ function App() {
     const { data } = await axios.get(`https://challenge.thef2e.com/api/thef2e2019/stage6/room/${roomId}`, options);
     if (data.success) {
       setCurrentView(data);
+      history.push(`/${roomId}`, { roomId, })
     }
   }
 

@@ -1,3 +1,7 @@
+body {
+  overflow-x: hidden;
+}
+
 header {
   /* font-size: 1.5rem; */
   /* padding: 1rem; */
@@ -33,6 +37,7 @@ header h1 {
   color: #777;
   font-weight: 300;
   padding: 0 .5rem;
+  overflow-x: hidden;
 }
 
 .roomList {

@@ -71,6 +71,9 @@ function App() {
 
   return (
     <div className="App">
+      <div className="blog">
+        <a href="https://noob.tw/react-pwa">Readme!</a>
+      </div>
       <header onClick={ () => { setCurrentView(null) } }>
         <h1>訂房 × PWA Example</h1>
       </header>

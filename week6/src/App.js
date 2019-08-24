@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import moment from 'moment';
+import { Offline, Online } from 'react-detect-offline';
 import './App.css';
 
 const TOKEN = 'U1S3jIj0e3AWun73hCingr6kGsSTqeZgZeOoj2qvvidp5obQAPKF5XIfF7g';
@@ -77,33 +78,38 @@ function App() {
               <div className="price">平日 {currentView.room[0].normalDayPrice}　假日 {currentView.room[0].holidayPrice}</div>
               <div className="desc">{currentView.room[0].description}</div>
             </div>
-            {currentView.booking.length ?
-              <div>
-                <h2>預約詳情</h2>
-                <div className="contactName">姓名：{currentView.booking[0].name}</div>
-                <div className="contactTel">電話：{currentView.booking[0].tel}</div>
-                <div className="contactDate">日期：{currentView.booking[0].date}</div>
-                <div className="submit">
-                  <button onClick={() => { cancelAll() }}>取消所有預約</button>
+            <Online>
+              {currentView.booking.length ?
+                <div>
+                  <h2>預約詳情</h2>
+                  <div className="contactName">姓名：{currentView.booking[0].name}</div>
+                  <div className="contactTel">電話：{currentView.booking[0].tel}</div>
+                  <div className="contactDate">日期：{currentView.booking[0].date}</div>
+                  <div className="submit">
+                    <button onClick={() => { cancelAll() }}>取消所有預約</button>
+                  </div>
                 </div>
-              </div>
-              :
-              <div>
-                <h2>我要預約</h2>
-                <div className="contactName"> 姓名：
-                  <input type="text" autoComplete="off" defaultValue={cName} onChange={(e) => { setCName(e.target.value) }}></input>
+                :
+                <div>
+                  <h2>我要預約</h2>
+                  <div className="contactName"> 姓名：
+                    <input type="text" autoComplete="off" defaultValue={cName} onChange={(e) => { setCName(e.target.value) }}></input>
+                  </div>
+                  <div className="contactTel"> 電話：
+                    <input type="tel" autoComplete="off" defaultValue={cTel} onChange={(e) => { setCTel(e.target.value) }}></input>
+                  </div>
+                  <div className="contactDate"> 日期：
+                    <input type="date" autoComplete="off" defaultValue={cDate} onChange={(e) => { setCDate(e.target.value) }}></input>
+                  </div>
+                  <div className="submit">
+                    <button disabled={!cName || !cTel || !cDate} onClick={ () => { bookRoom(currentView.room[0].id) } }>Do it!</button>
+                  </div>
                 </div>
-                <div className="contactTel"> 電話：
-                  <input type="tel" autoComplete="off" defaultValue={cTel} onChange={(e) => { setCTel(e.target.value) }}></input>
-                </div>
-                <div className="contactDate"> 日期：
-                  <input type="date" autoComplete="off" defaultValue={cDate} onChange={(e) => { setCDate(e.target.value) }}></input>
-                </div>
-                <div className="submit">
-                  <button disabled={!cName || !cTel || !cDate} onClick={ () => { bookRoom(currentView.room[0].id) } }>Do it!</button>
-                </div>
-              </div>
-            }
+              }
+            </Online>
+            <Offline>
+              <div class="oops">離線時無法訂房或查看訂房狀態。</div>
+            </Offline>
           </div>
         </div>
       }

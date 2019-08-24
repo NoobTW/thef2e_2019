@@ -1,0 +1,123 @@
+header {
+  /* font-size: 1.5rem; */
+  /* padding: 1rem; */
+  border-bottom: 1px solid #ccc;
+  color: #aaa;
+  margin-bottom: 1rem;
+  transition: .4s linear all;
+}
+
+ul {
+  padding: 0;
+  text-indent: 0;
+}
+
+header:hover {
+  color: #345;
+}
+
+footer{
+  padding: 1rem;
+  font-size: .9rem;
+  color: #aaa;
+}
+
+header h1 {
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+.App {
+  text-align: center;
+  font-family: 'Noto Sans TC', sans-serif;
+  color: #777;
+  font-weight: 300;
+  padding: 0 .5rem;
+}
+
+.roomList {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.room {
+  display: inline-block;
+  margin: 1rem;
+  cursor: pointer;
+  transition: .3s linear all;
+}
+
+.room .image {
+  opacity: 0.7;
+  transition: opacity .5s ease-out;
+}
+
+.room:hover{
+  color: #333;
+}
+
+.room:hover .image {
+  opacity: 1;
+}
+
+.image {
+  width: 300px;
+  height: 400px;
+  background-size: cover;
+}
+
+.roomDetail {
+  text-align: left;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.img {
+  display: inline-block;
+  width: 300px;
+}
+
+.detail {
+  width: calc(90% - 300px);
+  padding-left: 40px;
+  display: inline-block;
+}
+
+@media screen and (max-width:767px) { 
+  .img, .detail {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .img {
+    text-align: center;
+  }
+
+  .detail{ 
+    padding: 0;
+  }
+}
+
+.roomDetail .name {
+  font-size: 2rem;
+}
+
+.roomDetail .image {
+  opacity: 1;
+}
+
+input {
+  width: 300px;
+  border: 1px solid #ccc;
+  outline: 0;
+  padding: .5rem 1rem;
+}
+
+.contactName, .contactTel, .contactDate {
+  margin-bottom: .5rem;
+}
+
+.name {
+  font-size: 1.2rem;
+  font-weight: 300;
+}

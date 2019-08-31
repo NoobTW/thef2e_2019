@@ -84,7 +84,7 @@ function insertMsg(data){
 $('.send-wrapper').on('click', function() {
 	var u = $('#name').val().trim();
 	var c = $('.input .content').val().trim();
-	sendMessage(u, c);
+	if(u && c) sendMessage(u, c);
 });
 
 $('.input .content').on('keypress', function(e){

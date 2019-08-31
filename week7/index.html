@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+	<link rel="stylesheet" href="css/style.css">
+	<title>純粹聊天</title>
+</head>
+<body>
+	<section id="home">
+		<div class="wrapper">
+			<h1>純粹聊天。</h1>
+			<input id="name" type="text" placeholder="輸入暱稱" name="name">
+			<button id="start">繼續聊天</button>
+		</div>
+	</section>
+	<section id="chat">
+		<div class="messages"></div>
+		<div class="input">
+		<input type="text" class="text content" placeholder="輸入訊息...">
+		<div class="send-wrapper"><i class="send fa fa-arrow-circle-o-right"></i></div>
+	</div>
+	</section>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/4.6.0/firebase.js"></script>
+	<script src="js/all.js"></script>
+</body>
+</html>

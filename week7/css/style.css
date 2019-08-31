@@ -1,0 +1,113 @@
+* {
+	box-sizing: border-box;
+}
+
+#home {
+	text-align: center;
+	width: 100vw;
+}
+
+#home .wrapper {
+	max-width: 350px;
+	margin: 30vh auto 0;
+}
+
+#home h1 {
+	font-size: 3rem;
+	letter-spacing: 1rem;
+}
+
+#home input {
+	display: block;
+	margin: 0 auto;
+	border: 1px solid #333;
+	outline: 0;
+	padding: 1rem;
+	border-radius: 10px;
+	width: 100%;
+}
+
+#home button {
+	display: block;
+	margin: 1rem auto;
+	background: #111;
+	color: #fff;
+	border-radius: 10px;
+	padding: 1rem;
+	border: 0;
+	outline: 0;
+	width: 100%;
+}
+
+#chat {
+	display: none;
+}
+
+.messages{
+	padding-bottom: 2.5rem;
+}
+
+.msg{
+	margin: 1rem;
+	position: relative;
+}
+
+.msg .content{
+	padding: .1rem .5rem;
+	border: 1px solid #ccc;
+	display: inline;
+	border-radius: 0 1rem 1rem 1rem;
+	font-size: 1.2rem;
+}
+
+.msg .user{
+	font-size: .9rem;
+	margin: 1rem .5rem .5rem 0;
+	color: #333;
+	font-weight: 800;
+}
+
+.msg.sent{
+	text-align: right
+}
+
+.msg.sent .user{
+	display: none;
+	position: relative
+}
+
+.msg.sent .content{
+	background: #000;
+	color: white;
+	border: 0;
+	border-radius: 1rem 0 1rem 1rem;
+}
+
+.input{
+	position: fixed;
+	height: 2.5rem;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	z-index: 999;
+	border-top: 1px solid #ccc;
+	background: #fff;
+}
+
+.text{
+	background: transparent;
+	outline: 0;
+	border: 0;
+	#border-bottom: 1px solid #ccc;
+	padding: .5rem;
+	width: calc(100% - 55px);
+	vertical-align: top;
+}
+
+.send-wrapper{
+	display: inline-block;
+	font-size: 1.5rem;
+	color: #777;
+	padding-top: .2rem;
+	vertical-align: top;
+}

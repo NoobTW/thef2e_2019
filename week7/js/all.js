@@ -71,7 +71,7 @@ function insertMsg(data){
 	}else{
 		str = '<div class="msg received title='+time+'">';
 		if (data.user !== lastUserName) {
-			str += '<div class="user">' + data.user + '</div>';
+			str += '<div class="user">' + escapeHtml(data.user) + '</div>';
 		}
 		lastUserName = data.user;
 		str += '<div class="content">' + escapeHtml(data.content) + '</div></div>';
@@ -80,6 +80,11 @@ function insertMsg(data){
 	var $target = $('html,body');
 	$target.animate({scrollTop: $target.height()}, 300);
 }
+
+$('.send-wrapper').on('click', function() {
+	var u = $('#name').val().trim();
+	var c = $('.input .content').val().trim();
+});
 
 $('.input .content').on('keypress', function(e){
 	var code = (e.keyCode ? e.keyCode : e.which);

@@ -1,0 +1,142 @@
+html, body {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	font-family: sans-serif;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+.wrapper {
+	display: grid;
+	grid-template-columns: 240px 1fr;
+}
+
+h1 {
+	color: #4a4a4a;
+	font-size: 1.5rem;
+}
+
+.usage {
+	color: #4a90e2;
+}
+
+.logo {
+	font-size: 3rem;
+}
+
+#sidebar header {
+	text-align: center;
+	padding: 2rem 0;
+}
+
+#sidebar {
+	background: #f8f8f8;
+	height: 100vh;
+}
+
+#sidebar ul {
+	text-indent: 0;
+	padding: 0;
+}
+
+#sidebar li {
+	padding: 1rem 2rem;
+	list-style: none;
+	font-size: 1.1rem;
+	cursor: pointer;
+}
+
+#sidebar li:hover {
+	background: #fefefe;
+}
+
+#sidebar .icon {
+	display: inline-block;
+	margin-right: 1rem;
+}
+
+#sidebar li.active {
+	background: #fff;
+}
+
+#main header {
+	padding: 2rem;
+	position: relative;
+	width: 100%;
+}
+
+.button {
+	position: absolute;
+	top: 1.2rem;
+	right: 2rem;
+	background: #edf4fc;
+	font-size: 1rem;
+	color: #4a90E2;
+	padding: .8rem 1.2rem;
+}
+
+#main ul {
+	text-indent: 0;
+	padding: 0;
+}
+
+#main li {
+	font-size: 1rem;
+	list-style: none;
+	padding: 1.2rem 2rem;
+	color: #4a4a4a;
+	border-bottom: 1px solid #EEE;
+	position: relative;
+	cursor: pointer;
+}
+
+#main li:hover {
+	background: #FaFdFF;
+}
+
+#main li .icon {
+	margin-right: 1.2rem;
+	display: inline-block;
+	color: #9b9b9b;
+}
+
+#main li .attr {
+	color: #4a4a4a;
+	position: absolute;
+	top: 1.2rem;
+	right: 2rem;
+}
+
+#main li .attr i {
+	padding: 0 1rem;
+}
+
+#main li .attr i:hover {
+	transform: rotate(-359deg);
+	transition: .1s linear all;
+}
+
+#add {
+	position: fixed;
+	bottom: 2rem;
+	right: 2rem;
+	width: 75px;
+	height: 75px;
+	border-radius: 50%;
+	background: #4A90E2;
+	text-align: center;
+	line-height: 75px;
+	font-size: 2rem;
+	color: #fff;
+	cursor: pointer;
+}
+
+#add:hover {
+	transform: rotate(-180deg);
+	transition: .1s linear all;
+}
